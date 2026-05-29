@@ -1,1 +1,236 @@
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About Me</title>
+
+<link rel="icon" type="image/png" href="misaamane.png">
+
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="pixel-bg"></div>
+
+<img src="1.jpg" class="manga-left">
+<img src="2.jpg" class="manga-right">
+
+<h1 class="title">Welcome to my page!</h1>
+
+<div class="container">
+
+<!-- made by mashood -->
+
+<div class="misa-column">
+
+<img src="senbonzakura.gif" alt="Misa">
+<img src="misaamane2.jpg" alt="Misa">
+
+</div>
+
+<!-- About me -->
+
+<div class="about-box">
+
+<h2>about me</h2>
+
+<p>
+Hey i'm mashood, 17 years old.
+</p>
+
+<p>
+I try to bring good in a world filled with evil.
+</p>
+
+<p>
+I own a expose file server which you can fiiind below!
+just click the discord icon :)
+</p>
+
+<p>
+I have three socials which are
+roblox, discord and github.
+</p>
+
+</div>
+
+<!-- Right Misa -->
+
+<div class="misa-column">
+
+<img src="image4.jpg" alt="Misa">
+<img src="misaamane3.jpg" alt="Misa">
+
+</div>
+
+</div>
+
+
+<div class="social-icons">
+
+<a href="https://github.com/itsmashood" target="_blank">
+<img src="github.png">
+</a>
+
+<a href="https://discord.gg/59BdrZxWgW" target="_blank">
+<img src="discord.png">
+</a>
+
+<a href="https://www.roblox.com/users/7536569678/profile" target="_blank">
+<img src="roblox.png">
+</a>
+
+</div>
+
+
+<!-- Scroll indicator -->
+
+<div class="scroll-down">
+
+↓ scroll down
+
+</div>
+
+
+<!-- Credits -->
+
+<section class="credits-section">
+
+<div class="credits-box">
+
+<h2>credits</h2>
+
+<p>one full line</p>
+<p>two full line</p>
+<p>three full line</p>
+<p>four full line</p>
+<p>five full line</p>
+
+</div>
+
+</section>
+
+
+<script>
+
+// =====================
+// Cursor particles
+// =====================
+
+document.addEventListener("mousemove", (e) => {
+
+    const particle = document.createElement("div");
+
+    particle.className = "particle";
+
+    particle.style.left = e.clientX + "px";
+    particle.style.top = e.clientY + "px";
+
+    document.body.appendChild(particle);
+
+    setTimeout(() => {
+
+        particle.remove();
+
+    }, 600);
+
+});
+
+
+// =====================
+// Music system
+// =====================
+
+const songs = [
+    "music1.mp3",
+    "music2.mp3",
+    "music3.mp3",
+    "music4.mp3",
+    "music5.mp3",
+    "music6.mp3",
+    "music7.mp3",
+    "music8.mp3",
+    "music9.mp3",
+    "music10.mp3"
+];
+
+let currentSong = 0;
+
+const audio = new Audio();
+
+audio.volume = 0.5;
+
+
+// Play song
+function playSong() {
+
+    audio.src = songs[currentSong];
+
+    audio.play().catch(() => {
+
+        // Browser autoplay block fix
+        document.addEventListener("click", () => {
+
+            audio.play();
+
+        }, { once: true });
+
+    });
+
+}
+
+
+// Next song
+function nextSong() {
+
+    currentSong++;
+
+    // Loop back to first song
+    if (currentSong >= songs.length) {
+
+        currentSong = 0;
+
+    }
+
+    playSong();
+
+}
+
+
+// Song ended
+audio.addEventListener("ended", () => {
+
+    nextSong();
+
+});
+
+
+// Missing/corrupt file
+audio.addEventListener("error", () => {
+
+    nextSong();
+
+});
+
+
+// Start music when page loads
+window.addEventListener("load", () => {
+
+    playSong();
+
+});
+
+</script>
+
+</body>
+</html>
+```
