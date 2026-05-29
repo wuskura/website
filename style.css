@@ -45,6 +45,16 @@ position:relative;
 
 letter-spacing:1px;
 
+/* pixelated font rendering */
+-webkit-font-smoothing:none;
+-moz-osx-font-smoothing:auto;
+
+font-smooth:never;
+
+text-rendering:optimizeSpeed;
+
+image-rendering:pixelated;
+
 }
 
 
@@ -123,15 +133,15 @@ margin-top:40px;
 
 text-align:center;
 
-font-size:72px;
+font-size:64px;
 
 font-weight:normal;
 
 letter-spacing:3px;
 
 text-shadow:
-0 0 10px white,
-0 0 30px rgba(255,255,255,.3);
+2px 2px 0px rgba(255,255,255,.15),
+0 0 10px rgba(255,255,255,.25);
 
 }
 
@@ -179,7 +189,7 @@ box-shadow:
 
 .about-box h2{
 
-font-size:46px;
+font-size:40px;
 
 font-weight:normal;
 
@@ -189,17 +199,25 @@ text-align:center;
 
 letter-spacing:2px;
 
+text-shadow:
+2px 2px 0px rgba(255,255,255,.15),
+0 0 10px rgba(255,255,255,.25);
+
 }
 
 .about-box p{
 
-font-size:28px;
+font-size:24px;
 
 line-height:1.5;
 
 margin-bottom:20px;
 
 letter-spacing:1px;
+
+text-shadow:
+2px 2px 0px rgba(255,255,255,.12),
+0 0 8px rgba(255,255,255,.18);
 
 }
 
@@ -228,6 +246,8 @@ width:40px;
 
 transition:.3s ease;
 
+image-rendering:pixelated;
+
 }
 
 .social-icons img:hover{
@@ -254,14 +274,15 @@ margin-top:50px;
 
 margin-bottom:250px;
 
-font-size:60px;
+font-size:52px;
 
 letter-spacing:2px;
 
 opacity:.9;
 
 text-shadow:
-0 0 10px white;
+2px 2px 0px rgba(255,255,255,.15),
+0 0 10px rgba(255,255,255,.25);
 
 }
 
@@ -308,7 +329,7 @@ box-shadow:
 
 .credits-box h2{
 
-font-size:48px;
+font-size:42px;
 
 font-weight:normal;
 
@@ -316,15 +337,23 @@ margin-bottom:35px;
 
 letter-spacing:2px;
 
+text-shadow:
+2px 2px 0px rgba(255,255,255,.15),
+0 0 10px rgba(255,255,255,.25);
+
 }
 
 .credits-box p{
 
-font-size:26px;
+font-size:22px;
 
 line-height:1.8;
 
 margin-bottom:15px;
+
+text-shadow:
+2px 2px 0px rgba(255,255,255,.12),
+0 0 8px rgba(255,255,255,.18);
 
 }
 
@@ -399,19 +428,19 @@ padding:25px;
 
 .about-box h2{
 
-font-size:36px;
+font-size:34px;
 
 }
 
 .about-box p{
 
-font-size:22px;
+font-size:20px;
 
 }
 
 .scroll-down{
 
-font-size:42px;
+font-size:40px;
 
 }
 
@@ -423,13 +452,13 @@ width:90%;
 
 .credits-box h2{
 
-font-size:38px;
+font-size:36px;
 
 }
 
 .credits-box p{
 
-font-size:22px;
+font-size:20px;
 
 }
 
