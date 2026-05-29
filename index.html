@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,15 +21,11 @@
 
 <div class="pixel-bg"></div>
 
-<img src="1.jpg" class="manga-left">
-<img src="2.jpg" class="manga-right">
-
 <h1 class="title">Welcome to my page!</h1>
 
 <div class="container">
 
-<!-- made by mashood -->
-
+<!-- Left Images -->
 <div class="misa-column">
 
 <img src="senbonzakura.gif" alt="Misa">
@@ -37,8 +33,7 @@
 
 </div>
 
-<!-- About me -->
-
+<!-- About Me -->
 <div class="about-box">
 
 <h2>about me</h2>
@@ -52,8 +47,8 @@ I try to bring good in a world filled with evil.
 </p>
 
 <p>
-I own a expose file server which you can fiiind below!
-just click the discord icon :)
+I own a expose file server which you can find below!
+Just click the discord icon :)
 </p>
 
 <p>
@@ -63,8 +58,7 @@ roblox, discord and github.
 
 </div>
 
-<!-- Right Misa -->
-
+<!-- Right Images -->
 <div class="misa-column">
 
 <img src="image4.jpg" alt="Misa">
@@ -75,25 +69,25 @@ roblox, discord and github.
 </div>
 
 
+<!-- Socials -->
 <div class="social-icons">
 
 <a href="https://github.com/itsmashood" target="_blank">
-<img src="github.png">
+<img src="github.png" alt="Github">
 </a>
 
 <a href="https://discord.gg/59BdrZxWgW" target="_blank">
-<img src="discord.png">
+<img src="discord.png" alt="Discord">
 </a>
 
 <a href="https://www.roblox.com/users/7536569678/profile" target="_blank">
-<img src="roblox.png">
+<img src="roblox.png" alt="Roblox">
 </a>
 
 </div>
 
 
-<!-- Scroll indicator -->
-
+<!-- Scroll -->
 <div class="scroll-down">
 
 ↓ scroll down
@@ -102,7 +96,6 @@ roblox, discord and github.
 
 
 <!-- Credits -->
-
 <section class="credits-section">
 
 <div class="credits-box">
@@ -122,10 +115,7 @@ roblox, discord and github.
 
 <script>
 
-// =====================
 // Cursor particles
-// =====================
-
 document.addEventListener("mousemove", (e) => {
 
     const particle = document.createElement("div");
@@ -138,18 +128,13 @@ document.addEventListener("mousemove", (e) => {
     document.body.appendChild(particle);
 
     setTimeout(() => {
-
         particle.remove();
-
     }, 600);
 
 });
 
 
-// =====================
 // Music system
-// =====================
-
 const songs = [
     "music1.mp3",
     "music2.mp3",
@@ -169,65 +154,36 @@ const audio = new Audio();
 
 audio.volume = 0.5;
 
-
-// Play song
 function playSong() {
 
     audio.src = songs[currentSong];
 
     audio.play().catch(() => {
 
-        // Browser autoplay block fix
         document.addEventListener("click", () => {
-
             audio.play();
-
         }, { once: true });
 
     });
 
 }
 
-
-// Next song
 function nextSong() {
 
     currentSong++;
 
-    // Loop back to first song
     if (currentSong >= songs.length) {
-
         currentSong = 0;
-
     }
 
     playSong();
 
 }
 
+audio.addEventListener("ended", nextSong);
+audio.addEventListener("error", nextSong);
 
-// Song ended
-audio.addEventListener("ended", () => {
-
-    nextSong();
-
-});
-
-
-// Missing/corrupt file
-audio.addEventListener("error", () => {
-
-    nextSong();
-
-});
-
-
-// Start music when page loads
-window.addEventListener("load", () => {
-
-    playSong();
-
-});
+window.addEventListener("load", playSong);
 
 </script>
 
