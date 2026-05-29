@@ -1,4 +1,4 @@
-
+```css
 /* made by mashood */
 
 html,
@@ -60,7 +60,7 @@ height:100%;
 
 background:url("background.png") center center/cover no-repeat;
 
-opacity:.62;
+opacity:.22;
 
 z-index:0;
 
@@ -139,8 +139,6 @@ display:flex;
 justify-content:center;
 align-items:center;
 
-gap:70px;
-
 margin-top:60px;
 
 padding:20px;
@@ -148,42 +146,6 @@ padding:20px;
 position:relative;
 
 z-index:10;
-
-}
-
-
-/* side images */
-
-.misa-column{
-
-display:flex;
-
-flex-direction:column;
-
-gap:25px;
-
-}
-
-.misa-column img{
-
-width:160px;
-
-border-radius:10px;
-
-transition:.3s ease;
-
-box-shadow:
-0 0 8px rgba(255,255,255,.1);
-
-}
-
-.misa-column img:hover{
-
-transform:scale(1.03);
-
-box-shadow:
-0 0 15px white,
-0 0 35px rgba(255,255,255,.3);
 
 }
 
@@ -401,30 +363,6 @@ scale(0);
 
 @media(max-width:900px){
 
-.container{
-
-flex-direction:column;
-
-gap:35px;
-
-}
-
-.misa-column{
-
-flex-direction:row;
-
-flex-wrap:wrap;
-
-justify-content:center;
-
-}
-
-.misa-column img{
-
-width:120px;
-
-}
-
 .title{
 
 font-size:40px;
@@ -444,3 +382,4 @@ font-size:40px;
 }
 
 }
+```
