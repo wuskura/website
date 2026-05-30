@@ -1,4 +1,3 @@
-```css
 /* made by mashood */
 
 html,
@@ -44,6 +43,8 @@ color:white;
 position:relative;
 
 letter-spacing:1px;
+
+image-rendering:pixelated;
 
 }
 
@@ -136,6 +137,87 @@ text-shadow:
 }
 
 
+/* MAIN LAYOUT */
+
+.main-layout{
+
+display:flex;
+
+justify-content:center;
+align-items:center;
+
+gap:40px;
+
+margin-top:50px;
+
+position:relative;
+
+z-index:10;
+
+}
+
+
+/* IMAGE CARDS */
+
+.cards-column{
+
+display:flex;
+
+flex-direction:column;
+
+gap:35px;
+
+}
+
+.image-card{
+
+width:220px;
+height:220px;
+
+border-radius:18px;
+
+overflow:hidden;
+
+background:rgba(10,10,10,.55);
+
+backdrop-filter:blur(12px);
+
+border:1px solid rgba(255,255,255,.08);
+
+box-shadow:
+0 0 25px rgba(255,255,255,.08);
+
+transition:.3s ease;
+
+}
+
+.image-card:hover{
+
+transform:
+translateY(-8px)
+scale(1.03);
+
+box-shadow:
+0 0 20px rgba(255,255,255,.35);
+
+}
+
+.image-card img{
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+display:block;
+
+filter:
+contrast(1.05)
+brightness(.95);
+
+}
+
+
 /* content */
 
 .container{
@@ -144,8 +226,6 @@ display:flex;
 
 justify-content:center;
 align-items:center;
-
-margin-top:60px;
 
 padding:20px;
 
@@ -381,6 +461,26 @@ scale(0);
 
 /* mobile */
 
+@media(max-width:1100px){
+
+.main-layout{
+
+flex-direction:column;
+
+}
+
+.cards-column{
+
+flex-direction:row;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+}
+
 @media(max-width:900px){
 
 .title{
@@ -433,5 +533,11 @@ font-size:22px;
 
 }
 
+.image-card{
+
+width:160px;
+height:160px;
+
 }
-```
+
+}
